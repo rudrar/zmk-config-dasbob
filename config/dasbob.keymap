@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 / {
     behaviors {
@@ -13,14 +14,74 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
+
+        holdToggleL: holdToggleL {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDTOGGLEL";
+            bindings = <&tog>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
+
+        repeatOrTOG: repeatOrTOG {
+            compatible = "zmk,behavior-hold-tap";
+            label = "REPEATORTOG";
+            bindings = <&tog>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+        };
     };
 
-    combos { compatible = "zmk,combos"; };
+    macros {
+        lock: lock {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LEFT_GUI &kp L>;
+            label = "LOCK";
+        };
+
+        word_delete: word_delete {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LCTRL &kp BACKSPACE>;
+            label = "WORD_DELETE";
+        };
+    };
+
+    combos {
+        compatible = "zmk,combos";
+
+        lock {
+            bindings = <&lock>;
+            key-positions = <30 35>;
+        };
+
+        capsword {
+            bindings = <&caps_word>;
+            key-positions = <31 30>;
+        };
+
+        dele_word {
+            bindings = <&word_delete>;
+            key-positions = <31 34>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
 
         // This is a sample keymap intended to be replaced with your own
+
+        layer_0 {
+            bindings = <
+&kp Q           &kp L         &kp Y         &kp P        &kp B                 &kp Z    &kp F           &kp O        &kp U             &kp SQT
+&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S   &hm LGUI T   &kp G                 &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
+&kp W           &kp J         &kp V         &kp D        &kp K                 &kp X    &kp H           &kp DOT      &kp COMMA         &mt SEMI MINUS
+                              &lt 1 ESCAPE  &key_repeat  &mt DELETE BACKSPACE  &kp TAB  &lt 3 SPACE     &lt 2 ENTER
+            >;
+        };
 
         number {
             bindings = <
@@ -37,6 +98,15 @@
 &mt QUESTION EXCLAMATION  &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt RIGHT_BRACE LEFT_BRACE  &mt BACKSLASH SLASH  &kp KP_EQUAL   &kp HASH      &mt DOUBLE_QUOTES SQT  &mt GREATER_THAN LESS_THAN  &kp AT_SIGN
 &trans                    &trans                          &key_repeat                             &kp CARET                   &kp PIPE             &kp TILDE      &kp DOLLAR    &key_repeat            &trans                      &trans
                                                           &trans                                  &trans                      &trans               &trans         &trans        &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&trans  &trans     &trans     &trans     &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+&trans  &trans     &trans     &trans     &trans  &trans  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
+&trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans  &kp HOME        &kp END         &trans        &trans
+                   &trans     &trans     &trans  &trans  &trans          &trans
             >;
         };
     };
