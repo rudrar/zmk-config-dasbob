@@ -50,24 +50,7 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-
-        lock {
-            bindings = <&lock>;
-            key-positions = <30 35>;
-        };
-
-        capsword {
-            bindings = <&caps_word>;
-            key-positions = <31 30>;
-        };
-
-        dele_word {
-            bindings = <&word_delete>;
-            key-positions = <31 34>;
-        };
-    };
+    combos { compatible = "zmk,combos"; };
 
     keymap {
         compatible = "zmk,keymap";
