@@ -95,7 +95,7 @@
             bindings = <
 &kp Q           &kp L         &kp Y             &kp P         &kp B         &kp Z    &kp F           &kp O        &kp U             &kp SQT
 &hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S       &hm LGUI T    &kp G         &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
-&kp W           &kp J         &kp V             &kp D         &kp K         &kp X    &kp H           &kp DOT      &kp COMMA         &kp MINUS
+&kp W           &kp J         &kp V             &kp D         &kp K         &kp X    &kp H           &kp DOT      &kp COMMA         &mt SEMI MINUS
                               &holdToggleL 4 E  &lt 1 ESCAPE  &lt 2 RETURN  &kp TAB  &kp SPACE       &kp BSPC
             >;
         };
@@ -113,7 +113,7 @@
             bindings = <
 &trans                    &trans                          &trans                                  &mt MINUS PLUS              &kp PERCENT          &kp AMPERSAND  &kp ASTERISK  &trans                 &trans                      &trans
 &mt QUESTION EXCLAMATION  &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt RIGHT_BRACE LEFT_BRACE  &mt BACKSLASH SLASH  &kp KP_EQUAL   &kp HASH      &mt DOUBLE_QUOTES SQT  &mt GREATER_THAN LESS_THAN  &kp AT_SIGN
-&trans                    &trans                          &trans                                  &kp CARET                   &kp PIPE             &kp TILDE      &kp DOLLAR    &trans                 &trans                      &trans
+&trans                    &trans                          &key_repeat                             &kp CARET                   &kp PIPE             &kp TILDE      &kp DOLLAR    &key_repeat            &trans                      &trans
                                                           &trans                                  &trans                      &trans               &trans         &trans        &trans
             >;
         };
