@@ -35,13 +35,6 @@
     };
 
     macros {
-        snip: snip {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LSHFT &kp LEFT_GUI &kp S>;
-            label = "SNIP";
-        };
-
         lock: lock {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -60,19 +53,9 @@
     combos {
         compatible = "zmk,combos";
 
-        e {
+        lock {
             bindings = <&lock>;
             key-positions = <30 35>;
-        };
-
-        ee {
-            bindings = <&kp E>;
-            key-positions = <35 35 34>;
-        };
-
-        jvtg {
-            bindings = <&kp E>;
-            key-positions = <34 33>;
         };
 
         capsword {
@@ -80,19 +63,9 @@
             key-positions = <31 30>;
         };
 
-        vtg {
-            bindings = <&kp E>;
-            key-positions = <31 32>;
-        };
-
         dele_word {
             bindings = <&word_delete>;
             key-positions = <31 34>;
-        };
-
-        srtg {
-            bindings = <&kp E>;
-            key-positions = <32 33>;
         };
     };
 
