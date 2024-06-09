@@ -46,6 +46,8 @@
             #binding-cells = <0>;
             bindings = <&kp LCTRL &kp BACKSPACE>;
             label = "WORD_DELETE";
+            tap-ms = <50>;
+            wait-ms = <25>;
         };
     };
 
