@@ -61,7 +61,7 @@
         compatible = "zmk,combos";
 
         e {
-            bindings = <&kp E>;
+            bindings = <&lock>;
             key-positions = <30 35>;
         };
 
