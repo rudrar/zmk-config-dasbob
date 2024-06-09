@@ -13,6 +13,15 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
+
+        holdToggleL: holdToggleL {
+            compatible = "zmk,behavior-hold-tap";
+            label = "HOLDTOGGLEL";
+            bindings = <&tog>, <&kp>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <200>;
+        };
     };
 
     macros {
@@ -65,6 +74,16 @@
             bindings = <&kp E>;
             key-positions = <31 32>;
         };
+
+        e {
+            bindings = <&kp E>;
+            key-positions = <31 34>;
+        };
+
+        e {
+            bindings = <&kp E>;
+            key-positions = <32 33>;
+        };
     };
 
     keymap {
@@ -74,10 +93,10 @@
 
         layer_0 {
             bindings = <
-&kp Q           &kp L         &kp Y        &kp P       &kp B    &kp Z    &kp F           &kp O        &kp U             &kp SQT
-&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S  &hm LGUI T  &kp G    &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
-&kp W           &kp J         &kp V        &kp D       &kp K    &kp X    &kp H           &kp DOT      &kp COMMA         &kp MINUS
-                              &kp ESC      &trans      &kp RET  &kp TAB  &kp SPACE       &kp BSPC
+&kp Q           &kp L         &kp Y             &kp P         &kp B         &kp Z    &kp F           &kp O        &kp U             &kp SQT
+&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S       &hm LGUI T    &kp G         &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
+&kp W           &kp J         &kp V             &kp D         &kp K         &kp X    &kp H           &kp DOT      &kp COMMA         &kp MINUS
+                              &holdToggleL 4 E  &lt 1 ESCAPE  &lt 2 RETURN  &kp TAB  &kp SPACE       &kp BSPC
             >;
         };
 
@@ -96,6 +115,24 @@
 &mt QUESTION EXCLAMATION  &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt RIGHT_BRACE LEFT_BRACE  &mt BACKSLASH SLASH  &kp KP_EQUAL   &kp HASH      &mt DOUBLE_QUOTES SQT  &mt GREATER_THAN LESS_THAN  &kp AT_SIGN
 &trans                    &trans                          &trans                                  &kp CARET                   &kp PIPE             &kp TILDE      &kp DOLLAR    &trans                 &trans                      &trans
                                                           &trans                                  &trans                      &trans               &trans         &trans        &trans
+            >;
+        };
+
+        nav {
+            bindings = <
+&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans       &trans
+&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP       &kp RIGHT
+&trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END   &key_repeat  &caps_word
+                &trans  &trans  &trans  &trans  &trans    &trans
+            >;
+        };
+
+        onehand {
+            bindings = <
+&kp SQT    &kp U      &kp O    &kp F      &kp Z          &trans  &trans  &trans  &trans  &trans
+&kp A      &kp I      &kp E    &kp N      &kp M          &trans  &trans  &trans  &trans  &trans
+&kp MINUS  &kp COMMA  &kp DOT  &kp H      &kp X          &trans  &trans  &trans  &trans  &trans
+                      &tog 0   &kp SPACE  &kp BACKSPACE  &trans  &trans  &trans
             >;
         };
     };
