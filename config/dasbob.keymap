@@ -48,12 +48,22 @@
 
         ee {
             bindings = <&kp E>;
-            key-positions = <30 35>;
+            key-positions = <35 35 34>;
         };
 
         eee {
             bindings = <&kp E>;
-            key-positions = <30 35>;
+            key-positions = <34 33>;
+        };
+
+        eeeene {
+            bindings = <&kp E>;
+            key-positions = <31 30>;
+        };
+
+        e {
+            bindings = <&kp E>;
+            key-positions = <31 32>;
         };
     };
 
