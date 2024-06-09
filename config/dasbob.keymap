@@ -38,6 +38,25 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        e {
+            bindings = <&kp E>;
+            key-positions = <30 35>;
+        };
+
+        ee {
+            bindings = <&kp E>;
+            key-positions = <30 35>;
+        };
+
+        eee {
+            bindings = <&kp E>;
+            key-positions = <30 35>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
@@ -52,25 +71,16 @@
             >;
         };
 
-        symbol {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans
-            >;
-        };
-
         number {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans  &trans
-                &trans  &trans  &trans  &trans  &trans  &trans
+&trans  &trans  &trans  &trans  &trans  &kp STAR   &kp N7  &kp N8  &kp N9  &trans
+&trans  &trans  &trans  &trans  &trans  &kp FSLH   &kp N4  &kp N5  &kp N6  &kp N0
+&trans  &trans  &trans  &trans  &trans  &kp EQUAL  &kp N1  &kp N2  &kp N3  &trans
+                &trans  &trans  &trans  &trans     &trans  &trans
             >;
         };
 
-        layer_3 {
+        symbol {
             bindings = <
 &trans                    &trans                          &trans                                  &mt MINUS PLUS              &kp PERCENT          &kp AMPERSAND  &kp ASTERISK  &trans                 &trans                      &trans
 &mt QUESTION EXCLAMATION  &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt RIGHT_BRACE LEFT_BRACE  &mt BACKSLASH SLASH  &kp KP_EQUAL   &kp HASH      &mt DOUBLE_QUOTES SQT  &mt GREATER_THAN LESS_THAN  &kp AT_SIGN
