@@ -14,40 +14,6 @@
             quick-tap-ms = <0>;
             flavor = "tap-preferred";
         };
-
-        holdToggleL: holdToggleL {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLDTOGGLEL";
-            bindings = <&tog>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
-        repeatOrTOG: repeatOrTOG {
-            compatible = "zmk,behavior-hold-tap";
-            label = "REPEATORTOG";
-            bindings = <&tog>, <&key_repeat>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <300>;
-        };
-    };
-
-    macros {
-        lock: lock {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LEFT_GUI &kp L>;
-            label = "LOCK";
-        };
-
-        word_delete: word_delete {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp BACKSPACE>;
-            label = "WORD_DELETE";
-        };
     };
 
     combos { compatible = "zmk,combos"; };
