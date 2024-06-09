@@ -1,5 +1,6 @@
 #include <behaviors.dtsi>
 #include <dt-bindings/zmk/keys.h>
+#include <dt-bindings/zmk/mouse.h>
 
 / {
     behaviors {
@@ -22,16 +23,18 @@
             #binding-cells = <2>;
             tapping-term-ms = <200>;
         };
+
+        repeatOrTOG: repeatOrTOG {
+            compatible = "zmk,behavior-hold-tap";
+            label = "REPEATORTOG";
+            bindings = <&tog>, <&key_repeat>;
+
+            #binding-cells = <2>;
+            tapping-term-ms = <300>;
+        };
     };
 
     macros {
-        repeat: repeat {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp NUMBER_2 &kp NUMBER_4 &kp NUMBER_2 &kp NUMBER_4 &kp NUMBER_2 &kp NUMBER_4>;
-            label = "REPEAT";
-        };
-
         snip: snip {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
@@ -60,27 +63,27 @@
             key-positions = <35 35 34>;
         };
 
-        eee {
+        jvtg {
             bindings = <&kp E>;
             key-positions = <34 33>;
         };
 
-        eeeene {
+        ypg {
             bindings = <&kp E>;
             key-positions = <31 30>;
         };
 
-        e {
+        vtg {
             bindings = <&kp E>;
             key-positions = <31 32>;
         };
 
-        e {
+        rst {
             bindings = <&kp E>;
             key-positions = <31 34>;
         };
 
-        e {
+        srtg {
             bindings = <&kp E>;
             key-positions = <32 33>;
         };
@@ -93,10 +96,10 @@
 
         layer_0 {
             bindings = <
-&kp Q           &kp L         &kp Y             &kp P         &kp B         &kp Z    &kp F           &kp O        &kp U             &kp SQT
-&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S       &hm LGUI T    &kp G         &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
-&kp W           &kp J         &kp V             &kp D         &kp K         &kp X    &kp H           &kp DOT      &kp COMMA         &mt SEMI MINUS
-                              &holdToggleL 4 E  &lt 1 ESCAPE  &lt 2 RETURN  &kp TAB  &kp SPACE       &kp BSPC
+&kp Q           &kp L         &kp Y        &kp P         &kp B         &kp Z    &kp F           &kp O        &kp U             &kp SQT
+&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S  &hm LGUI T    &kp G         &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
+&kp W           &kp J         &kp V        &kp D         &kp K         &kp X    &kp H           &kp DOT      &kp COMMA         &mt SEMI MINUS
+                              &key_repeat  &lt 1 ESCAPE  &lt 2 RETURN  &kp TAB  &lt 3 SPACE     &kp BSPC
             >;
         };
 
@@ -120,19 +123,10 @@
 
         nav {
             bindings = <
-&trans  &trans  &trans  &trans  &trans  &trans  &trans    &trans    &trans       &trans
-&trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP       &kp RIGHT
-&trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END   &key_repeat  &caps_word
-                &trans  &trans  &trans  &trans  &trans    &trans
-            >;
-        };
-
-        onehand {
-            bindings = <
-&kp SQT    &kp U      &kp O    &kp F      &kp Z          &trans  &trans  &trans  &trans  &trans
-&kp A      &kp I      &kp E    &kp N      &kp M          &trans  &trans  &trans  &trans  &trans
-&kp MINUS  &kp COMMA  &kp DOT  &kp H      &kp X          &trans  &trans  &trans  &trans  &trans
-                      &tog 0   &kp SPACE  &kp BACKSPACE  &trans  &trans  &trans
+&trans  &trans     &trans     &trans     &trans  &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT
+&trans  &trans     &trans     &trans     &trans  &trans  &kp LEFT        &kp DOWN        &kp UP        &kp RIGHT
+&trans  &mkp MCLK  &mkp RCLK  &mkp LCLK  &trans  &trans  &kp HOME        &kp END         &key_repeat   &caps_word
+                   &trans     &trans     &trans  &trans  &trans          &trans
             >;
         };
     };
