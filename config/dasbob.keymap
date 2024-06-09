@@ -51,7 +51,13 @@
         word_delete: word_delete {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LCTRL &kp BACKSPACE>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp BACKSPACE>,
+                <&macro_release>;
+
             label = "WORD_DELETE";
             tap-ms = <50>;
             wait-ms = <25>;
