@@ -72,10 +72,10 @@
 
         layer_3 {
             bindings = <
-&trans  &trans                          &trans                                  &trans                      &trans               &trans  &trans  &trans                 &trans                      &trans
-&trans  &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt RIGHT_BRACE LEFT_BRACE  &mt BACKSLASH SLASH  &trans  &trans  &mt DOUBLE_QUOTES SQT  &mt GREATER_THAN LESS_THAN  &trans
-&trans  &trans                          &trans                                  &trans                      &trans               &trans  &trans  &trans                 &trans                      &trans
-                                        &trans                                  &trans                      &trans               &trans  &trans  &trans
+&trans                    &trans                          &trans                                  &mt MINUS PLUS              &kp PERCENT          &kp AMPERSAND  &kp ASTERISK  &trans                 &trans                      &trans
+&mt QUESTION EXCLAMATION  &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt RIGHT_BRACE LEFT_BRACE  &mt BACKSLASH SLASH  &kp KP_EQUAL   &kp HASH      &mt DOUBLE_QUOTES SQT  &mt GREATER_THAN LESS_THAN  &kp AT_SIGN
+&trans                    &trans                          &trans                                  &kp CARET                   &kp PIPE             &kp TILDE      &kp DOLLAR    &trans                 &trans                      &trans
+                                                          &trans                                  &trans                      &trans               &trans         &trans        &trans
             >;
         };
     };
