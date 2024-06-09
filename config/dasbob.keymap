@@ -74,15 +74,6 @@
 
         // This is a sample keymap intended to be replaced with your own
 
-        layer_0 {
-            bindings = <
-&kp Q           &kp L         &kp Y         &kp P        &kp B                 &kp Z    &kp F           &kp O        &kp U             &kp SQT
-&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S   &hm LGUI T   &kp G                 &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
-&kp W           &kp J         &kp V         &kp D        &kp K                 &kp X    &kp H           &kp DOT      &kp COMMA         &mt SEMI MINUS
-                              &lt 1 ESCAPE  &key_repeat  &mt DELETE BACKSPACE  &kp TAB  &lt 3 SPACE     &lt 2 ENTER
-            >;
-        };
-
         number {
             bindings = <
 &trans  &trans  &trans  &trans  &trans  &kp STAR   &kp N7  &kp N8  &kp N9  &trans
