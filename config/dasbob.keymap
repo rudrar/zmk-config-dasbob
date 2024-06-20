@@ -126,9 +126,9 @@
 
         symbol {
             bindings = <
-&trans                    &trans                          &trans                                  &mt MINUS PLUS              &kp PERCENT          &kp AMPERSAND  &kp ASTERISK    &trans                 &trans                      &trans
+&trans                    &kp PIPE                        &kp CARET                               &mt MINUS PLUS              &kp PERCENT          &kp AMPERSAND  &kp ASTERISK    &trans                 &trans                      &trans
 &mt QUESTION EXCLAMATION  &mt RIGHT_BRACKET LEFT_BRACKET  &mt RIGHT_PARENTHESIS LEFT_PARENTHESIS  &mt RIGHT_BRACE LEFT_BRACE  &mt BACKSLASH SLASH  &kp AT         &mt MINUS PLUS  &mt DOUBLE_QUOTES SQT  &mt GREATER_THAN LESS_THAN  &kp KP_EQUAL
-&trans                    &trans                          &key_repeat                             &kp CARET                   &kp PIPE             &kp TILDE      &kp DOLLAR      &key_repeat            &trans                      &trans
+&trans                    &kp RIGHT_BRACKET               &kp RIGHT_PARENTHESIS                   &kp RIGHT_BRACE             &kp SLASH            &kp TILDE      &kp DOLLAR      &trans                 &trans                      &trans
                                                           &trans                                  &trans                      &trans               &trans         &trans          &trans
             >;
         };
