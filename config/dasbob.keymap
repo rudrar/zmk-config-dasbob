@@ -62,6 +62,19 @@
             tap-ms = <50>;
             wait-ms = <25>;
         };
+
+        drun: drun {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LEFT_GUI>,
+                <&macro_tap>,
+                <&kp D>,
+                <&macro_release>;
+
+            label = "DRUN";
+        };
     };
 
     combos {
