@@ -56,7 +56,8 @@
                 <&kp LCTRL>,
                 <&macro_tap>,
                 <&kp BACKSPACE>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LCTRL>;
 
             label = "WORD_DELETE";
             tap-ms = <50>;
@@ -71,7 +72,8 @@
                 <&kp LEFT_GUI>,
                 <&macro_tap>,
                 <&kp D>,
-                <&macro_release>;
+                <&macro_release>,
+                <&kp LEFT_GUI>;
 
             label = "DRUN";
         };
