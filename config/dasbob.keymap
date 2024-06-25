@@ -101,17 +101,6 @@
             bindings = <&drun>;
             key-positions = <32 33>;
         };
-
-        toggame {
-            bindings = <&tog 4>;
-            key-positions = <35 34 33>;
-        };
-
-        rcst {
-            bindings = <&kp Z>;
-            key-positions = <31 32>;
-            layers = <4>;
-        };
     };
 
     keymap {
@@ -152,15 +141,6 @@
 &trans  &trans  &trans  &trans  &trans  &trans  &kp LEFT  &kp DOWN  &kp UP  &kp RIGHT
 &trans  &trans  &trans  &trans  &trans  &trans  &kp HOME  &kp END   &trans  &trans
                 &trans  &trans  &trans  &trans  &trans    &trans
-            >;
-        };
-
-        layer_4 {
-            bindings = <
-&kp A  &kp B  &kp C  &kp D  &kp E  &trans  &trans   &trans  &trans  &trans
-&kp F  &kp G  &kp H  &kp I  &kp J  &trans  &trans   &trans  &trans  &trans
-&kp K  &kp L  &kp M  &kp N  &kp O  &trans  &trans   &trans  &trans  &trans
-              &kp P  &kp Q  &kp R  &trans  &kp ESC  &tog 0
             >;
         };
     };
