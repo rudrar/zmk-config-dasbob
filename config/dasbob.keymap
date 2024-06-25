@@ -101,6 +101,11 @@
             bindings = <&drun>;
             key-positions = <32 33>;
         };
+
+        toggame {
+            bindings = <&tog 4>;
+            key-positions = <35 34 33>;
+        };
     };
 
     keymap {
