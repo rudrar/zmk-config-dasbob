@@ -154,7 +154,7 @@
 &kp A  &kp B  &kp C  &kp D  &kp E  &trans  &trans  &trans  &trans  &trans
 &kp F  &kp G  &kp H  &kp I  &kp J  &trans  &trans  &trans  &trans  &trans
 &kp K  &kp L  &kp M  &kp N  &kp O  &trans  &trans  &trans  &trans  &trans
-              &kp P  &kp Q  &kp R  &trans  &trans  &trans
+              &kp P  &kp Q  &kp R  &trans  &trans  &tog 0
             >;
         };
     };
