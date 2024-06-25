@@ -106,6 +106,12 @@
             bindings = <&tog 4>;
             key-positions = <35 34 33>;
         };
+
+        rcst {
+            bindings = <&kp Z>;
+            key-positions = <31 32>;
+            layers = <4>;
+        };
     };
 
     keymap {
