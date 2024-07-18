@@ -14,22 +14,14 @@
             flavor = "tap-preferred";
         };
 
-        holdToggleL: holdToggleL {
-            compatible = "zmk,behavior-hold-tap";
-            label = "HOLDTOGGLEL";
-            bindings = <&key_repeat>, <&kp>;
-
-            #binding-cells = <2>;
-            tapping-term-ms = <200>;
-        };
-
         repeatOrKP: repeatOrKP {
             compatible = "zmk,behavior-hold-tap";
             label = "REPEATORKP";
-            bindings = <&kp>, <&key_repeat>;
+            bindings = <&key_repeat>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <300>;
+            flavor = "tap-preferred";
         };
     };
 
@@ -110,10 +102,10 @@
 
         layer_0 {
             bindings = <
-&kp Q           &kp L         &kp Y         &kp P                &kp B                 &kp Z    &kp F           &kp O        &kp U             &kp SQT
-&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S   &hm LGUI T           &kp G                 &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
-&kp W           &kp J         &kp V         &kp D                &kp K                 &kp X    &kp H           &kp DOT      &kp COMMA         &mt SEMI MINUS
-                              &lt 1 ESCAPE  &repeatOrKP SPACE 0  &mt DELETE BACKSPACE  &kp TAB  &lt 3 SPACE     &lt 2 ENTER
+&kp Q           &kp L         &kp Y         &kp P                    &kp B                 &kp Z    &kp F           &kp O        &kp U             &kp SQT
+&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S   &hm LGUI T               &kp G                 &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
+&kp W           &kp J         &kp V         &kp D                    &kp K                 &kp X    &kp H           &kp DOT      &kp COMMA         &mt SEMI MINUS
+                              &lt 1 ESCAPE  &repeatOrKP SPACE SPACE  &mt DELETE BACKSPACE  &kp TAB  &lt 3 SPACE     &lt 2 ENTER
             >;
         };
 
