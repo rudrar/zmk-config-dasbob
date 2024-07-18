@@ -17,7 +17,7 @@
         holdToggleL: holdToggleL {
             compatible = "zmk,behavior-hold-tap";
             label = "HOLDTOGGLEL";
-            bindings = <&kp>, <&key_repeat>;
+            bindings = <&key_repeat>, <&kp>;
 
             #binding-cells = <2>;
             tapping-term-ms = <200>;
