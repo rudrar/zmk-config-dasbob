@@ -69,6 +69,19 @@
 
             label = "DRUN";
         };
+
+        removeWORD: removeWORD {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings =
+                <&macro_press>,
+                <&kp LCTRL>,
+                <&macro_tap>,
+                <&kp BACKSPACE>,
+                <&macro_release>;
+
+            label = "REMOVEWORD";
+        };
     };
 
     combos {
