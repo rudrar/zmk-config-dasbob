@@ -1,13 +1,11 @@
 manifest:
   remotes:
-    - name: zmkfirmware
-      url-base: https://github.com/zmkfirmware
     - name: urob
-    url-base: https://github.com/urob
+      url-base: https://github.com/urob
   projects:
     - name: zmk
       remote: urob
-      revision: mouse-3.2
+      revision: main
       import: app/west.yml
   self:
     path: config
