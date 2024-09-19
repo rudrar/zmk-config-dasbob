@@ -127,10 +127,10 @@
 
         layer_0 {
             bindings = <
-&kp Q           &kp L         &kp Y         &kp P        &kp B                 &kp Z    &kp F           &kp O        &kp U             &kp SQT
-&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S   &hm LGUI T   &kp G                 &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
-&kp W           &kp J         &kp V         &kp D        &kp K                 &kp X    &kp H           &kp DOT      &kp COMMA         &mt SEMI MINUS
-                              &lt 1 ESCAPE  &key_repeat  &mt DELETE BACKSPACE  &kp TAB  &lt 3 SPACE     &lt 2 ENTER
+&kp Q           &kp L         &kp Y         &kp P       &kp B                 &kp Z    &kp F           &kp O        &kp U             &kp SQT
+&hm LEFT_ALT C  &hm LSHIFT R  &hm LCTRL S   &hm LGUI T  &kp G                 &kp M    &hm LEFT_GUI N  &hm LCTRL E  &hm LEFT_SHIFT I  &hm LEFT_ALT A
+&kp W           &kp J         &kp V         &kp D       &kp K                 &kp X    &kp H           &kp DOT      &kp COMMA         &mt SEMI MINUS
+                              &lt 1 ESCAPE  &kp SPACE   &mt DELETE BACKSPACE  &kp TAB  &lt 3 C_REPEAT  &lt 2 ENTER
             >;
         };
 
@@ -158,6 +158,15 @@
 &trans  &mmv MOVE_LEFT  &mmv MOVE_DOWN  &mmv MOVE_UP  &mmv MOVE_RIGHT  &trans  &kp LEFT   &kp DOWN   &kp UP     &kp RIGHT
 &trans  &trans          &trans          &trans        &trans           &trans  &kp HOME   &kp END    &trans     &trans
                         &trans          &trans        &trans           &trans  &trans     &trans
+            >;
+        };
+
+        layer_4 {
+            bindings = <
+&kp Q  &kp W  &kp E   &kp R   &kp T   &kp Y   &kp U   &kp I      &kp O    &kp P
+&kp A  &kp S  &kp D   &kp F   &kp G   &kp H   &kp J   &kp K      &kp L    &kp SEMI
+&kp Z  &kp X  &kp C   &kp V   &kp B   &kp N   &kp M   &kp COMMA  &kp DOT  &kp APOS
+              &trans  &trans  &trans  &trans  &trans  &trans
             >;
         };
     };
