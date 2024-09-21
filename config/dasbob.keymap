@@ -112,6 +112,14 @@
         qwertyLayer {
             bindings = <&to 4>;
             key-positions = <0 9>;
+            require-prior-idle-ms = <1500>;
+        };
+
+        rcstrcstrcst {
+            bindings = <&to 0>;
+            key-positions = <0 9>;
+            layers = <4>;
+            require-prior-idle-ms = <1000>;
         };
     };
 
