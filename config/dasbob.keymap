@@ -120,7 +120,7 @@
         };
 
         qwertyLayer {
-            bindings = <&tog 4>;
+            bindings = <&to 4>;
             key-positions = <31 32 33 34 35 30>;
         };
     };
